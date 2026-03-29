@@ -47,8 +47,8 @@ A formação está organizada de forma modular, permitindo navegação progressi
 ## 📁 1. Python, Versionamento e Git
 Fundamentos essenciais para desenvolvimento e organização de projetos.
 
-- [Python e Lógica de Programação](./1-Python-Versionamento-Git)
-- [Versionamento com Git](./1-Python-Versionamento-Git)
+- [Python e Lógica de Programação](./1-Python-Versionamento-Git/1-Introducao-Python/)
+- [Versionamento com Git](./1-Python-Versionamento-Git/2-Git-GitHub/)
 
 ---
 
