@@ -189,5 +189,3 @@ A partir desses fundamentos, o profissional estará preparado para evoluir para:
 - Engenharia de dados com PySpark
 - Construção de pipelines ETL
 - Desenvolvimento de soluções orientadas a dados
-
----

@@ -389,3 +389,7 @@ Dominar esse conceito permite:
 - Aplicar transformações
 - Preparar dados para análise
 - Construir pipelines simples
+
+---
+
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../3-Strings/README.md) | [⬇ Próximo módulo: Listas](../5-Tuplas/README.md)

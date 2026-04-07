@@ -348,3 +348,7 @@ Sets são ideais para:
 - Comparar conjuntos de dados
 
 Eles são fundamentais em pipelines de dados eficientes.
+
+---
+
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../5-Tuplas/README.md) | [⬇ Próximo módulo: Tuplas](../7-Dicionario/README.md)

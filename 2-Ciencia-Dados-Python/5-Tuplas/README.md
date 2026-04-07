@@ -261,3 +261,7 @@ Elas são muito utilizadas em:
 - Configurações
 - Retornos de funções
 - Estruturas fixas
+
+---
+
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../4-Listas/README.md) | [⬇ Próximo módulo: Tuplas](../6-Conjuntos/README.md)

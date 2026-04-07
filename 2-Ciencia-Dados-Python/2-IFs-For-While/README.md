@@ -363,3 +363,7 @@ Elas permitem:
 - Criar regras de decisão
 - Processar grandes volumes de dados
 - Controlar fluxos complexos
+
+---
+
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../1-Operadores/README.md) | [⬇ Próximo módulo: Strings](../3-Strings/README.md)

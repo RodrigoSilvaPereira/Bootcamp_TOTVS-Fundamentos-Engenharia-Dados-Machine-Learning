@@ -276,3 +276,7 @@ Neste módulo, foram abordados:
 - Retorno de valores
 - Uso avançado com `args` e `kwargs`
 - Escopo e boas práticas
+
+---
+
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../7-Dicionario/README.md) | [⬇ Próximo módulo: Tuplas](../../3-BDR-ETL/README.md)

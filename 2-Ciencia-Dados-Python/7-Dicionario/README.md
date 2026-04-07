@@ -332,3 +332,7 @@ Eles permitem:
 - Trabalhar com APIs e JSON
 - Organizar informações de forma eficiente
 - Construir pipelines de dados
+
+---
+
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../6-Conjuntos/README.md) | [⬇ Próximo módulo: Tuplas](../8-Funcoes/README.md)
