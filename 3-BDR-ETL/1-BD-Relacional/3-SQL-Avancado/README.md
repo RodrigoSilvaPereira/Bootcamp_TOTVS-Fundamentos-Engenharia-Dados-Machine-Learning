@@ -30,7 +30,7 @@ A 1FN estabelece que cada valor em uma tabela deve ser atômico, ou seja, indivi
 
 Como corrigir:
 
-'''sql
+```sql
 -- Adicionar colunas de endereço à tabela "Usuarios"
 ALTER TABLE Usuarios
 ADD rua VARCHAR(100),
@@ -48,7 +48,7 @@ SET rua = SUBSTRING_INDEX(SUBSTRING_INDEX(endereco, ',', 1), ',', -1),
 -- Exclusão da coluna "endereco" da tabela original
 ALTER TABLE usuarios
 DROP COLUMN endereco;
-'''
+```
 
 **2FN: Dependência Total da Chave Primária**
 
@@ -87,51 +87,51 @@ São usados no SQL para combinar dados de duas ou mais tabelas relacionadas em u
 
 Retorna apenas as linhas que têm correspondência em ambas as tabelas envolvidas na junção. A junção é feita com base em uma condição de igualdade especifica na cláusula ON.
 
-'''sql
+```sql
 SELECT *
 FROM tabela1
 INNER JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
-'''
+```
 
 **Exemplo no nosso banco:**
 
-'''sql
+```sql
 SELECT
  u.nome, u.email, r.id_destino, r.status, d.nome as nome_destino
 FROM usuarios as u
 INNER JOIN reservas as r ON u.id = r.id_usuario
 INNER JOIN destino as d ON d.id = r.id_destino;
-'''
+```
 
 #### LEFT JOIN
 
 Retorna todas as linhas da tabela à esquerda da junção e as linhas correspondentes da tabela à direita. Se não houver correspondência, os valores da tabela à direita serão NULL.
 
-'''sql
+```sql
 SELECT *
 FROM tabela1
 LEFT JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
-'''
+```
 
 #### RIGHT JOIN
 
 Retorna todas as linhas da tabela à direita da junção e as linhas correspondentes da tabela à esquerda. Se não houver correspondência, os valores da tabela à esquerda serão NULL.
 
-'''sql
+```sql
 SELECT *
 FROM tabela1
 RIGHT JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
-'''
+```
 
 #### FULL JOIN
 
 Retorna todas as linhas de ambas as tabelas envolvidas na junção, combinando-as com base em uma condição de igualdade. Se não houver correspondência, os valores ausentes serão preenchidos com NULL.
 
-'''sql
+```sql
 SELECT *
 FROM tabela1
 FULL JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
-'''
+```
 
 *OBS: MariaDB não tem comando FULL JOIN*
 
@@ -148,20 +148,20 @@ As subconsultas podem ser usadas em várias partes de uma consulta:
 
 **Exemplos:**
 
-'''sql
+```sql
 SELECT * FROM destinos
 WHERE id NOT in (SELECT id_destino FROM reservas);
-'''
+```
 
-'''sql
+```sql
 SELECT
   u.nome,
   u.email,
   (SELECT COUNT(*) from reservas WHERE id_usuario = usuarios.id) AS total_reservas
 FROM usuarios u;
-'''
+```
 
-'''sql
+```sql
 SELECT
   u.nome,
   u.email,
@@ -169,7 +169,7 @@ SELECT
    FROM reservas r
    WHERE r.id_usuario = u.id) AS total_reservas
 FROM usuarios u;
-'''
+```
 
 ### Funções Agregadas e Agrupamento de Resultados
 
@@ -183,7 +183,7 @@ FROM usuarios u;
 
 **Exemplos de código:**
 
-'''sql
+```sql
 SELECT COUNT(*) FROM usuarios;
 
 -- Media da idade dos usuarios
@@ -221,7 +221,7 @@ ORDER BY data_nascimento, nome;
 SELECT nome, data_nascimento
 FROM usuarios
 ORDER BY data_nascimento, nome DESC;
-'''
+```
 
 ## 🔹 Índices
 
@@ -229,7 +229,7 @@ Em SQL, índices são estruturas de dados usadas para acelerar a busca e filtrag
 
 ### Inserindo massa de dados
 
-'''sql
+```sql
 INSERT INTO usuarios (nome, email, data_nascimento, rua) VALUES
 ('João Silva', 'joao.silva@example.com', '1990-01-01', 'Rua A'),
 ('Maria Santos', 'maria.santos@example.com', '1992-03-15', 'Rua B'),
@@ -261,26 +261,26 @@ INSERT INTO usuarios (nome, email, data_nascimento, rua) VALUES
 ('Gustavo Costa', 'gustavo.costa@example.com', '1998-11-16', 'Av. B'),
 ('Lara Sousa', 'lara.sousa@example.com', '1993-06-09', 'Av. C'),
 ('Pedro Lima', 'pedro.lima@example.com', '1996-09-27', 'Av. D');
-'''
+```
 
 ### Análise de Consultas com EXPLAIN
 
-'''sql
+```sql
 EXPLAIN SELECT * FROM usuarios WHERE nome = "Maria";
 
 EXPLAIN SELECT * FROM usuarios us
 INNER JOIN reservas rs
 ON us.id = rs.id_usuario
 WHERE nome = "Maria";
-'''
+```
 
 ### Criando Índice
 
-'''sql
+```sql
 CREATE INDEX idx_nome ON usuarios (nome);
 
 EXPLAIN SELECT * FROM usuarios WHERE nome = "Maria";
-'''
+```
 
 ---
 
@@ -313,17 +313,17 @@ EXPLAIN SELECT * FROM usuarios WHERE nome = "Maria";
 
 **Exemplo de simulação de FULL JOIN no MariaDB:**
 
-'''sql
+```sql
 SELECT * FROM usuarios u
 LEFT JOIN reservas r ON u.id = r.id_usuario
 UNION
 SELECT * FROM usuarios u
 RIGHT JOIN reservas r ON u.id = r.id_usuario;
-'''
+```
 
 **Exemplo de subconsulta correlacionada vs JOIN:**
 
-'''sql
+```sql
 -- Subconsulta
 SELECT nome FROM usuarios u
 WHERE EXISTS (SELECT 1 FROM reservas r WHERE r.id_usuario = u.id);
@@ -331,15 +331,15 @@ WHERE EXISTS (SELECT 1 FROM reservas r WHERE r.id_usuario = u.id);
 -- JOIN equivalente (geralmente mais performático)
 SELECT DISTINCT u.nome FROM usuarios u
 INNER JOIN reservas r ON u.id = r.id_usuario;
-'''
+```
 
 **Exemplo de ordenação com múltiplos critérios:**
 
-'''sql
+```sql
 -- Ordenar destinos por nome decrescente e depois por descrição
 SELECT nome, descricao FROM destinos
 ORDER BY nome DESC, descricao ASC;
-'''
+```
 
 ---
 
