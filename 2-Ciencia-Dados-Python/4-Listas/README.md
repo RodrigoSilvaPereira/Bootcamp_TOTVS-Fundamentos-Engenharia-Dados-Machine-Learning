@@ -392,4 +392,4 @@ Dominar esse conceito permite:
 
 ---
 
-> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../3-Strings/README.md) | [⬇ Próximo módulo: Listas](../5-Tuplas/README.md)
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../3-Strings/README.md) | [⬇ Próximo módulo: Tuplas](../5-Tuplas/README.md)

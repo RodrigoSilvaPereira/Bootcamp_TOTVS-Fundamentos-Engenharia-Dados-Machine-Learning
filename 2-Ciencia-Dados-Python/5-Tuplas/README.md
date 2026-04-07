@@ -264,4 +264,4 @@ Elas são muito utilizadas em:
 
 ---
 
-> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../4-Listas/README.md) | [⬇ Próximo módulo: Tuplas](../6-Conjuntos/README.md)
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../4-Listas/README.md) | [⬇ Próximo módulo: Conjuntos](../6-Conjuntos/README.md)

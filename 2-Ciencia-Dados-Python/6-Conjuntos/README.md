@@ -351,4 +351,4 @@ Eles são fundamentais em pipelines de dados eficientes.
 
 ---
 
-> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../5-Tuplas/README.md) | [⬇ Próximo módulo: Tuplas](../7-Dicionario/README.md)
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../5-Tuplas/README.md) | [⬇ Próximo módulo: Dicionários](../7-Dicionario/README.md)

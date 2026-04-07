@@ -279,4 +279,4 @@ Neste módulo, foram abordados:
 
 ---
 
-> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../7-Dicionario/README.md) | [⬇ Próximo módulo: Tuplas](../../3-BDR-ETL/README.md)
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../7-Dicionario/README.md) | [⬇ Próximo módulo: BDR - ETL](../../3-BDR-ETL/README.md)

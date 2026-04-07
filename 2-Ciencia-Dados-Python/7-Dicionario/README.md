@@ -335,4 +335,4 @@ Eles permitem:
 
 ---
 
-> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../6-Conjuntos/README.md) | [⬇ Próximo módulo: Tuplas](../8-Funcoes/README.md)
+> [🏠 Voltar ao índice](../../README.md) | [⬆ Módulo anterior](../6-Conjuntos/README.md) | [⬇ Próximo módulo: Funções](../8-Funcoes/README.md)
