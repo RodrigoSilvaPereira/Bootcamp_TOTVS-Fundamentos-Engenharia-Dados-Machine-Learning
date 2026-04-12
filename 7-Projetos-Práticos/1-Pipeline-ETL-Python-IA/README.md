@@ -35,7 +35,7 @@ O pipeline segue uma arquitetura modular e escalável inspirada em práticas rea
 
 ## ⚙️ Fluxo do Pipeline
 
-'''
+```
 DATA RAW
    ↓
 EXTRACT (leitura do CSV)
@@ -45,13 +45,13 @@ TRANSFORM (limpeza e padronização)
 ENRICH (IA - DeepSeek API)
    ↓
 LOAD (PostgreSQL)
-'''
+```
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-'''
+```
 codigos/
 │
 ├── config/                 # Configurações do projeto
@@ -75,7 +75,7 @@ codigos/
 ├── main.py                 # Orquestrador do pipeline
 ├── requirements.txt        # Dependências
 └── .env                    # Variáveis de ambiente
-'''
+```
 
 ---
 
@@ -107,7 +107,7 @@ O projeto utiliza a API da DeepSeek para:
 
 Os dados finais são armazenados em PostgreSQL:
 
-'''sql
+```sql
 CREATE TABLE emails (
     id SERIAL PRIMARY KEY,
     sender VARCHAR(255),
@@ -115,7 +115,7 @@ CREATE TABLE emails (
     email_date TIMESTAMP,
     target SMALLINT
 );
-'''
+```
 
 ---
 
@@ -137,30 +137,30 @@ CREATE TABLE emails (
 
 ### 1. Clonar o repositório
 
-'''bash
+```bash
 git clone <repo-url>
 cd codigos
-'''
+```
 
 ### 2. Criar ambiente virtual
 
-'''bash
+```bash
 python -m venv venv
 venv\Scripts\activate     # Windows
 # source venv/bin/activate  # Linux/Mac
-'''
+```
 
 ### 3. Instalar dependências
 
-'''bash
+```bash
 pip install -r requirements.txt
-'''
+```
 
 ### 4. Configurar variáveis de ambiente
 
 Criar arquivo `.env` na raiz do projeto:
 
-'''env
+```env
 DB_USER=postgres
 DB_PASSWORD=sua_senha
 DB_HOST=localhost
@@ -168,13 +168,13 @@ DB_PORT=5432
 DB_NAME=emails_db
 
 DEEPSEEK_API_KEY=sua_chave
-'''
+```
 
 ### 5. Executar pipeline
 
-'''bash
+```bash
 python main.py
-'''
+```
 
 ---
 
@@ -217,13 +217,13 @@ Este projeto explora conceitos importantes de Engenharia de Dados:
 
 ## 📈 Badges do Projeto
 
-'''
+```
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![ETL](https://img.shields.io/badge/ETL-Pipeline-green)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
 ![DeepSeek](https://img.shields.io/badge/DeepSeek-AI-purple)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
-'''
+```
 
 ---
 

@@ -150,30 +150,30 @@ Massa de dados com 200 observações, com apenas uma variável preditora, que se
 
 **Etapa 1: Gerar dados de regressão**
 
-'''py
+```py
 from sklearn.datasets import make_regression
 
 x, y = make_regression(n_samples=200, n_features=1, noise=30)
-'''
+```
 
 Usando o matplotlib, com o módulo pyplot e a função scatter(), que criará o gráfico, e função show() que exibirá na tela:
 
-'''py
+```py
 import matplotlib.pyplot as plt
 
 # mostrando no gráfico:
 plt.scatter(x, y)
 plt.show()
-'''
+```
 
 Com os dados gerados, já podemos iniciar a criação de nosso modelo de machine learning. Para isso utilizaremos o módulo linear_model, e a função LinearRegression().
 
-'''py
+```py
 from sklearn.linear_model import LinearRegression
 
 modelo = LinearRegression()
 modelo.fit(x, y)
-'''
+```
 
 O objeto de modelo está pronto para receber os dados que dão origem ao modelo.
 
@@ -181,21 +181,21 @@ O objeto de modelo está pronto para receber os dados que dão origem ao modelo.
 
 Vamos visualizar a reta de regressão linear que o modelo gera, com os mesmos dados que criaram o modelo. Para isso iremos utilizar o método predict(), indicando que queremos aplicar a previsão nos valores de x. O resultado do método será uma previsão de y para cada valor x apresentado.
 
-'''py
+```py
 modelo.predict(x)
-'''
+```
 
 A função plot() do pacote pyplot gera uma reta com os dados apresentados. Como já temos os dados de x e y, basta indicá-los na função. Assim, primeiramente montamos novamente o gráfico de x e y original com a função scatter(), e somamos a ele a reta de regressão:
 
-'''py
+```py
 plt.scatter(x, y)
 plt.plot(x, modelo.predict(x), color='red', linewidth=3)
 plt.show()
-'''
+```
 
 ## 🔹 Exemplo de Leitura de Arquivo CSV com Python
 
-'''py
+```py
 import pandas as pd
 
 # Leitura de arquivo CSV a partir de uma URL
@@ -210,7 +210,7 @@ print(df.info())
 
 # Estatísticas descritivas
 print(df.describe())
-'''
+```
 
 ## 🔹 Framework Luigi para ETL com Python
 
@@ -261,7 +261,7 @@ O framework Luigi tem suporte para trabalho de forma gráfica, disponível em `l
 
 **Exemplo de pipeline simples com Luigi:**
 
-'''py
+```py
 import luigi
 import pandas as pd
 
@@ -294,11 +294,11 @@ class CarregarDados(luigi.Task):
 
 if __name__ == '__main__':
     luigi.build([CarregarDados()], local_scheduler=True)
-'''
+```
 
 **Exemplo de leitura de CSV de uma URL com Pandas:**
 
-'''py
+```py
 import pandas as pd
 
 # Base de dados pública de vinhos (exemplo)
@@ -310,7 +310,7 @@ print("\nPrimeiras linhas:")
 print(df.head())
 print("\nEstatísticas:")
 print(df.describe())
-'''
+```
 
 ---
 
