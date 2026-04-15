@@ -1,0 +1,1 @@
+Now, based on the reading of the letter in .png format that I sent, create a code to insert the information from this letter into the two tables that were created.
