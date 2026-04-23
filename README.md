@@ -1,17 +1,4 @@
-# 📌 Bootcamp TOTVS - Fundamentos de Engenharia de Dados & Machine Learning
-
-Este repositório documenta uma trilha completa de estudos voltada para **Engenharia de Dados, Computação em Nuvem e Machine Learning**, com foco no desenvolvimento de habilidades práticas e teóricas exigidas pelo mercado.
-
-A estrutura foi organizada para simular uma evolução real de carreira, partindo de fundamentos de programação até a construção de pipelines de dados e aplicações em ambientes cloud.
-
-Ao longo da jornada, são abordadas tecnologias e conceitos utilizados por:
-
-- Engenheiros de Dados
-- Analistas de Dados
-- Engenheiros de Machine Learning
-
----
-
+aaaaaaaa
 # 🎯 Objetivo do Bootcamp
 
 O objetivo deste bootcamp é capacitar o profissional para:
